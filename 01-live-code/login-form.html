@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Form Demo</title>
+
+  <style>
+    .hide {
+      display: none;
+    }
+
+    .show {
+      display: inline;
+    }
+
+    .error-container {
+      color: #f00;
+    }
+  </style>
+</head>
+<body>
+
+<form method="POST" action="/server-handler/sing-in">
+  <label for="login">Login:</label>
+  <input id="login" name="login" />
+  <span class="error-container hide"></span>
+
+  <label for="password">Password:</label>
+  <input id="password" type="password" name="password" />
+
+  <input type="submit" value="Sing in" />
+</form>
+
+<!-- Так можно начать писать на JS прямо на HTML странице -->
+<script type="text/javascript">
+  // Найти форму
+    // Подписаться на событие отправки формы
+      // При отправке формы
+      // Проверить длину значения поля ввода
+        // Если данна, меньше 6-ти символов
+        // Запретить отправку формы
+        // Показать ошибку
+</script>
+
+</body>
+</html>

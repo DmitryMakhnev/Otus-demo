@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Form Demo</title>
+
+  <style>
+    .hide {
+      display: none;
+    }
+
+    .show {
+      display: inline;
+    }
+
+    .error-container {
+      color: #f00;
+    }
+  </style>
+</head>
+<body>
+
+<form method="POST" action="/server-handler/sing-in">
+  <label for="login">Login:</label>
+  <input id="login" name="login" />
+  <span class="error-container hide"></span>
+
+  <label for="password">Password:</label>
+  <input id="password" type="password" name="password" />
+
+  <input type="submit" value="Sing in" />
+</form>
+
+<!-- Так можно начать писать на JS прямо на HTML странице -->
+<script type="text/javascript">
+  // Найти форму
+  document.querySelector('form')
+    // Подписаться на событие отправки формы
+    .addEventListener('submit', event => {
+      // При отправке формы
+      var loginInput = document.querySelector('#login');
+      // Проверить длину значения поля ввода
+      if (loginInput.value < 6) {
+        // Если данна, меньше 6-ти символов
+
+        // Запретить отправку формы
+        event.preventDefault();
+
+        // Показать ошибку
+        var errorMessageContainer = document.querySelector('.error-container');
+        errorMessageContainer.innerHTML = 'Minimal login length is 6';
+        errorMessageContainer.classList.replace('hide', 'show');
+      }
+    });
+</script>
+
+</body>
+</html>

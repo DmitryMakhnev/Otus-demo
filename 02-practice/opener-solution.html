@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Opener practice</title>
+
+  <style>
+    .hide {
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<button id="opener">Open</button>
+<div id="content" class="hide">Content</div>
+
+<script type="text/javascript">
+  // Найдите кнопку открытия
+  document.querySelector("#opener")
+    // Подпишитесь на событие `click` (поможет поймать клик на элементе)
+    .addEventListener("click", () => {
+      // При клике
+      // Найдите контент
+      document.querySelector("#content")
+        // Сделайте контент видимым (поменяйте класс 'hide' на 'show')
+        .classList
+        .replace("hide", "show");
+    });
+</script>
+</body>
+</html>
