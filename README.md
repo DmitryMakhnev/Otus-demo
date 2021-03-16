@@ -17,3 +17,9 @@
 - git
   - [Изначальный пример](./02-practice/opener.html)
   - [Решение](./02-practice/opener-solution.html)
+
+## Домашняя работа
+- Онлайн
+  - [Изначальный пример](https://codesandbox.io/s/otus-demo-1-home-work-54jg1?file=/index.html)
+- git
+  - [Изначальный пример](./03-home-work/toggler.html)
